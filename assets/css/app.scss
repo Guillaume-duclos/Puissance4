@@ -1,0 +1,131 @@
+$background: #d1d8e0;
+$mainColor: #0984e3;
+$darkMainColor: #056fcc;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.flex { display: flex; }
+.row { flex-direction: row; }
+.colmun { flex-direction: column; }
+.center { justify-content: center; }
+.around { justify-content: space-around; }
+.between { justify-content: space-between; }
+
+.shadow {
+  -moz-box-shadow: 0px 0px 20px 0px #979ca6;
+  -webkit-box-shadow: 0px 0px 20px 0px #979ca6;
+  -o-box-shadow: 0px 0px 20px 0px #979ca6;
+  box-shadow: 0px 0px 20px 0px #979ca6;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  background-color: $background;
+  font-family: Arial, Helvetica, sans-serif;
+
+  .container {
+    width: 100%;
+    height: 100%;
+
+    h1 {
+      text-align: center;
+      margin-top: 50px;
+      width: 100%;
+      color: $mainColor;
+    }
+
+    .connexion-container {
+      margin: auto;
+    }
+
+    #jeu {
+      border-radius: 20px;
+    }
+
+    #plateau {
+      padding: 10px;
+      background-color: $mainColor;
+      border: 1px solid $darkMainColor;
+      border-radius: 20px;
+
+      table {
+        border: 1px solid red;
+      }
+
+      tr {
+        border: 1px solid red;
+      }
+
+      td {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        border: 2px solid $darkMainColor;
+        margin: 5px;
+        background-color: $background;
+        -moz-box-shadow: inset 0px 0px 20px 0px #a5abb5;
+        -webkit-box-shadow: inset 0px 0px 20px 0px #a5abb5;
+        -o-box-shadow: inset 0px 0px 20px 0px #a5abb5;
+        box-shadow: inset 0px 0px 20px 0px #a5abb5;
+      }
+
+      td.joueur1 {
+        background-color: red;
+      }
+
+      td.joueur2 {
+        background-color: yellow;
+      }
+    }
+
+    .form-container {
+      border: 0px solid red;
+      margin: auto auto auto 100px;
+
+      .login-form {
+        border: 0px solid red;
+        padding: 20px;
+        -webkit-border-radius: 20px;
+        -moz-border-radius: 20px;
+        border-radius: 20px;
+        color: $mainColor;
+
+        h2 {
+          margin-bottom: 20px;
+        }
+
+        form > div, #connexion_form > div {
+          margin: 10px 0;
+        }
+
+        label {
+          margin-right: 10px;
+          line-height: 25px;
+        }
+
+        input {
+          float: right;
+          height: 25px;
+          width: 200px;
+          padding-left: 5px;
+          border: 0;
+          font-size: .9em;
+          color: $mainColor;
+        }
+      }
+
+      a {
+        margin: 30px 0 0 20px;
+        font-size: .9em;
+        display: block;
+      }
+    }
+  }
+}

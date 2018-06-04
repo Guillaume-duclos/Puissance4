@@ -1,0 +1,27 @@
+{%  extends 'base.html.twig' %}
+
+{% block body  %}
+
+    <div class="container flex colmun">
+
+        <h1>Inscription</h1>
+
+        <div class="connexion-container flex row">
+
+            <div class="form-container">
+                <div class="login-form">
+                    <h2>Inscription</h2>
+                    {{ form_start(form) }}
+                        {{ form_row(form.name) }}
+                        {{ form_row(form.email) }}
+                        {{ form_row(form.password.first) }}
+                        {{ form_row(form.password.second) }}
+                        <input type="submit" value="S'inscrire"/>
+                    {{ form_end(form) }}
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+{% endblock %}

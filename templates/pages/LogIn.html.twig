@@ -1,0 +1,29 @@
+{%  extends 'base.html.twig' %}
+
+{% block body  %}
+
+    <div class="container flex colmun">
+
+        <h1>Puissance 4</h1>
+
+        <div class="connexion-container flex row">
+
+            <div id="jeu" class="shadow">
+                Veuillez activer javascript pour jouer.
+            </div>
+
+            <div class="form-container">
+                <div class="login-form">
+                    <h2>Connection</h2>
+                    {{ form_start(form) }}
+                    {{ form_widget(form) }}
+                    <input type="submit" value="Se connecter"/>
+                    {{ form_end(form) }}
+                </div>
+                <a href={{ path('signin') }}>S'inscrire ici</a>
+            </div>
+
+        </div>
+    </div>
+
+{% endblock %}
